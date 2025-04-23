@@ -5,12 +5,11 @@ router.get("/login", (req, res) => {
   if (req.user) {
     return res.redirect("/profile");
   }
-  res.render("login");
+  res.render("login", { user: req.user });
 });
 
 router.get("/logout", (req, res) => {
-  req.logout((e) => console.log("Error while logging out: ", e));
-  res.redirect("/");
+  req.logout(() => res.redirect("/"));
 });
 
 router.get(
