@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Sign up</title>
+  </head>
+  <body>
+    <h1>Sign up</h1>
+    <form
+      action="/sign-up"
+      method="post"
+    >
+      <div class="input-field">
+        <label for="name">Username</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          required
+          placeholder="username"
+        />
+      </div>
+      <div class="input-field">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          required
+          placeholder="m@example.com"
+        />
+      </div>
+      <div class="input-field">
+        <label for="password">Password</label>
+        <input
+          name="password"
+          id="password"
+          type="password"
+          required
+          placeholder="******"
+        />
+      </div>
+      <button type="submit">Sign up</button>
+    </form>
+  </body>
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 0 auto;
+      gap: 16px;
+    }
+
+    .input-field {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    input {
+      height: 32px;
+      border-radius: 4px;
+      padding-inline: 4px;
+    }
+
+    button {
+      padding: 8px 4px;
+      font-size: 16px;
+      font-weight: 600;
+      background-color: rgb(246, 89, 10);
+      border-radius: 4px;
+      color: white;
+    }
+  </style>
+</html>
