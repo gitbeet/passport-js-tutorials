@@ -6,10 +6,19 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <link
+      rel="stylesheet"
+      href="styles/styles.css"
+    />
     <title>Home page</title>
   </head>
   <body
-    ><h1>Passport.js Local Strategy</h1>
-    <p>Hello, <b><%= user %></b></p>
+    ><h1>Passport.js Local Strategy</h1> <h1>Hi <%= name %></h1>
+    <form
+      action="/sign-out?_method=DELETE"
+      method="post"
+    >
+      <button type="submit">Sign out</button>
+    </form>
   </body>
 </html>
